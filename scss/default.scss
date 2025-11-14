@@ -5,22 +5,12 @@
   margin: 0;
   padding: 0;
   font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
   background-color: colors.$bg;
   font-size: 1em;
-}
-
-.logo {
-  font-family: "Fira Code", sans-serif;
-  font-size: 24px;
-  color: colors.$c-title-dark;
-  font-weight: 500;
-
-  span {
-    color: colors.$c-primary;
-  }
 }
 
 p,
@@ -34,6 +24,7 @@ a {
 p,
 div {
   color: colors.$c-prg-dark;
+  font-weight: 300;
 }
 
 h1,
@@ -42,10 +33,22 @@ h3,
 h4,
 h5 {
   color: colors.$c-title-dark;
+  font-weight: 600;
 }
 
 ul {
   list-style-type: none;
+}
+
+.logo {
+  font-family: "Fira Code", sans-serif;
+  font-size: 24px;
+  color: colors.$c-title-dark;
+  font-weight: 500;
+
+  span {
+    color: colors.$c-primary;
+  }
 }
 
 .btn {
@@ -59,9 +62,22 @@ ul {
 
   background-color: colors.$c-primary;
   color: colors.$bg;
+  outline: 3px solid transparent;
+
+  transition: background-color 600ms ease, color 600ms ease;
+
+  &:hover {
+    background-color: colors.$c-primary-trp;
+    color: colors.$c-primary;
+  }
 }
 
 .sm {
   padding: 6px 12px;
   font-size: 14px;
+}
+
+.svgimage {
+  filter: invert(74%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(92%)
+    contrast(85%);
 }

@@ -4,21 +4,12 @@
   margin: 0;
   padding: 0;
   font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
   background-color: #1f1f1f;
   font-size: 1em;
-}
-
-.logo {
-  font-family: "Fira Code", sans-serif;
-  font-size: 24px;
-  color: #ffffff;
-  font-weight: 500;
-}
-.logo span {
-  color: #f7df1e;
 }
 
 p,
@@ -32,6 +23,7 @@ a {
 p,
 div {
   color: #bfbfbf;
+  font-weight: 300;
 }
 
 h1,
@@ -40,10 +32,21 @@ h3,
 h4,
 h5 {
   color: #ffffff;
+  font-weight: 600;
 }
 
 ul {
   list-style-type: none;
+}
+
+.logo {
+  font-family: "Fira Code", sans-serif;
+  font-size: 24px;
+  color: #ffffff;
+  font-weight: 500;
+}
+.logo span {
+  color: #f7df1e;
 }
 
 .btn {
@@ -56,11 +59,21 @@ ul {
   font-weight: 500;
   background-color: #f7df1e;
   color: #1f1f1f;
+  outline: 3px solid transparent;
+  transition: background-color 600ms ease, color 600ms ease;
+}
+.btn:hover {
+  background-color: rgba(247, 222, 30, 0.1);
+  color: #f7df1e;
 }
 
 .sm {
   padding: 6px 12px;
   font-size: 14px;
+}
+
+.svgimage {
+  filter: invert(74%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(92%) contrast(85%);
 }
 
 .navbar {
@@ -80,52 +93,203 @@ ul {
   display: flex;
   gap: 2rem;
 }
-
 .nav-links li a {
   color: #bfbfbf;
 }
-
 .nav-links li a.active {
   color: #ffffff;
 }
 
 #home {
   display: flex;
-  height: 100vh;
+  justify-content: space-between;
+  height: calc(100vh - 67px);
   padding: 5%;
+  padding-bottom: 0;
+  position: relative;
 }
-
+#home::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  display: block;
+  background-color: rgba(31, 31, 31, 0.5);
+  backdrop-filter: blur(10px);
+}
 #home > div {
   width: 50%;
 }
-
 #home .introduction {
   display: flex;
   flex-direction: column;
   align-items: start;
-  gap: 2rem 0;
+  gap: 1.5rem 0;
 }
-
 #home .introduction .mini-title {
   font-size: 20px;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 6px;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
   color: #f7df1e;
+  background-color: rgba(247, 222, 30, 0.1);
 }
-
 #home .introduction h2 {
   font-size: 80px;
   line-height: 1.1;
+  max-width: 70%;
 }
-
 #home .introduction .prg {
   font-size: 14px;
   font-weight: 300;
   max-width: 50%;
 }
-
 #home .introduction .btn-flex {
   display: flex;
+  align-items: center;
   gap: 1rem;
+}
+#home .introduction .btn-flex a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #292929;
+}
+#home .introduction .btn-flex a img {
+  width: 20px;
+  height: 20px;
+  display: flex;
+}
+#home > img {
+  width: 400px;
+  background-color: #292929;
+  border-radius: 100% 100% 0 0;
+}
+
+#skills {
+  width: 100%;
+  height: 250px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  padding-inline: 5%;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+}
+#skills::-webkit-scrollbar {
+  display: none;
+}
+#skills div {
+  display: flex;
+  transition: transform 600ms ease;
+}
+#skills div:hover {
+  transform: scale(1.1);
+}
+#skills div img {
+  width: 60px;
+  height: auto;
+  object-fit: cover;
+}
+
+#about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding-block: 10%;
+}
+#about > img {
+  width: 400px;
+  height: 600px;
+  background-color: #292929;
+  border-radius: 30%;
+}
+#about .about-me {
+  width: 400px;
+  max-width: 400px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 1rem;
+}
+#about .about-me h2 {
+  font-size: 32px;
+  color: #f7df1e;
+}
+#about .about-me h3 {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1;
+}
+#about .about-me p {
+  font-size: 14px;
+}
+#about .about-me .mini-blocks-flex {
+  display: inherit;
+  gap: 0.5rem;
+}
+#about .about-me .mini-blocks-flex div {
+  width: 133.3333333333px;
+  padding: 8px 0;
+  border-radius: 8px;
+  text-align: center;
+  background-color: #292929;
+}
+#about .about-me .mini-blocks-flex div h4 {
+  font-size: 20px;
+  line-height: 1;
+}
+#about .about-me .mini-blocks-flex div p {
+  font-size: 12px;
+}
+#about .about-me > a {
+  margin-top: 1rem;
+}
+
+#projects {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  padding: 5%;
+}
+#projects .introduction {
+  display: inherit;
+  flex-direction: column;
+  align-items: start;
+  gap: 1rem;
+  width: 400px;
+}
+#projects .introduction h2 {
+  font-size: 32px;
+}
+#projects .introduction p {
+  font-size: 14px;
+}
+#projects .grid-projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 300px 150px;
+  gap: 1rem;
+  width: 600px;
+  height: 450px;
+}
+#projects .grid-projects > div {
+  background-color: #292929;
+  border-radius: 8px;
+}
+#projects .grid-projects .first-row {
+  grid-column: 1/3 span;
 }
 
 /*# sourceMappingURL=global.css.map */
