@@ -1,0 +1,67 @@
+@use "colors";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: colors.$bg;
+  font-size: 1em;
+}
+
+.logo {
+  font-family: "Fira Code", sans-serif;
+  font-size: 24px;
+  color: colors.$c-title-dark;
+  font-weight: 500;
+
+  span {
+    color: colors.$c-primary;
+  }
+}
+
+p,
+label,
+input,
+a {
+  letter-spacing: -0.3px;
+  text-decoration: none;
+}
+
+p,
+div {
+  color: colors.$c-prg-dark;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: colors.$c-title-dark;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.btn {
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  border-radius: 8px;
+  padding: 7px 14px;
+  font-size: 1em;
+  font-weight: 500;
+
+  background-color: colors.$c-primary;
+  color: colors.$bg;
+}
+
+.sm {
+  padding: 6px 12px;
+  font-size: 14px;
+}
