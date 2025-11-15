@@ -166,11 +166,6 @@
 
     h2 {
       font-size: 32px;
-      color: colors.$c-primary;
-    }
-
-    h3 {
-      font-size: 24px;
       font-weight: 500;
       line-height: 1;
     }
@@ -238,15 +233,122 @@
     height: 450px;
 
     & > div {
+      display: inherit;
       background-color: colors.$c-border;
       border-radius: 8px;
-    }
+      box-shadow: rgba(14, 13, 13, 0.25) 0px 13px 27px -5px,
+        rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 
-    .row {
+      transition: scale 600ms ease;
+
+      &:hover {
+        scale: 1.03;
+      }
+
+      figure {
+        display: flex;
+        position: relative;
+
+        &:hover figcaption,
+        &:active figcaption {
+          display: flex;
+        }
+
+        & > img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 8px;
+        }
+
+        figcaption {
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          height: auto;
+          width: 100%;
+          justify-content: space-between;
+          align-items: end;
+          padding: 1rem;
+          background-image: linear-gradient(
+            to top,
+            rgb(20, 20, 20),
+            rgba(31, 31, 31, 0.3)
+          );
+          backdrop-filter: blur(3px);
+          display: none;
+          border-radius: 0 0 8px 8px;
+
+          & > div {
+            max-width: 50%;
+          }
+
+          h4 {
+            font-size: 18px;
+          }
+
+          p {
+            font-size: 10px;
+            letter-spacing: 0.5px;
+          }
+
+          .btn-popup {
+            font-size: 12px;
+            text-decoration: underline;
+            color: colors.$c-title-dark;
+            cursor: pointer;
+
+            &:hover + .popup {
+              display: block;
+            }
+          }
+
+          .popup {
+            position: absolute;
+            left: -4px;
+            margin-top: 1.5rem;
+            font-size: 10px;
+            letter-spacing: 0.5px;
+            background-color: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(5px);
+            padding: 0.5rem;
+            border-radius: 8px;
+            display: none;
+          }
+
+          .details-skills {
+            display: inherit;
+            flex-direction: column;
+            align-items: end;
+            gap: 0.5rem;
+
+            .material-list {
+              display: inherit;
+              flex-wrap: nowrap;
+              gap: 0.5rem;
+
+              img {
+                width: 15px;
+                height: 15px;
+              }
+            }
+          }
+        }
+      }
     }
 
     .first-row {
       grid-column: 1 / 3 span;
+    }
+
+    .column1 {
+      grid-row: 2;
+      grid-column: 1;
+    }
+
+    .column2 {
+      grid-row: 2;
+      grid-column: 2 span;
     }
   }
 }
