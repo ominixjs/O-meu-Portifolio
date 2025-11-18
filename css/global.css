@@ -557,6 +557,12 @@ button {
 }
 
 @media (max-width: 1000px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 1000px) {
   .btn {
     padding: 9px 18px;
     font-size: 1em;

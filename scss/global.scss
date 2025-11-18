@@ -19,6 +19,12 @@ $breakpoints: (
   }
 }
 
+body {
+  @include respond-to(mobile) {
+    font-size: 18px;
+  }
+}
+
 .btn {
   @include respond-to(mobile) {
     padding: 9px 18px;
