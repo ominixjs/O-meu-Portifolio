@@ -18,6 +18,20 @@ $breakpoints: (
   }
 }
 
+.btn {
+  @include respond-to(mobile) {
+    padding: 9px 18px;
+    font-size: 1em;
+  }
+}
+
+.sm {
+  @include respond-to(mobile) {
+    padding: 8px 16px;
+    font-size: 1em;
+  }
+}
+
 .navbar {
   @include respond-to(mobile) {
     & > div {
