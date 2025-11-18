@@ -7,4 +7,184 @@
 
 // Reponsividade
 
+$breakpoints: (
+  mobile: 1000px,
+  desktop: 1024px,
+);
+
+@mixin respond-to($device) {
+  @media (max-width: map-get($breakpoints, $device)) {
+    @content;
+  }
+}
+
+.navbar {
+  @include respond-to(mobile) {
+    & > div {
+      .nav-links {
+        display: none;
+      }
+    }
+  }
+}
+
+#home {
+  @include respond-to(mobile) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    height: auto;
+    padding: 10vh 1rem;
+
+    &::after {
+      display: none;
+    }
+
+    & > div {
+      width: 100%;
+    }
+
+    .introduction {
+      padding-bottom: 0;
+
+      .mini-title {
+        max-width: 100%;
+        font-size: 20px;
+      }
+
+      h2 {
+        font-size: 64px;
+      }
+
+      .prg {
+        max-width: 100%;
+      }
+    }
+
+    img {
+      display: none;
+    }
+  }
+}
+
+#skills {
+  @include respond-to(mobile) {
+    .container {
+      width: 100%;
+      height: auto;
+      flex-wrap: wrap;
+      padding: 20vh 1rem;
+    }
+  }
+}
+
+#about {
+  @include respond-to(mobile) {
+    flex-direction: column;
+    padding: 0;
+    height: auto;
+
+    & > img {
+      width: 300px;
+      height: 430px;
+    }
+
+    .about-me {
+      padding-inline: 1rem;
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+
+      .mini-blocks-flex {
+        width: 100%;
+        div {
+          width: calc(100% / 3);
+        }
+      }
+    }
+  }
+}
+
+#projects {
+  @include respond-to(mobile) {
+    height: auto;
+    width: auto;
+    padding: 20vh 1rem;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+
+    .introduction {
+      height: auto;
+      width: auto;
+    }
+
+    .grid-projects {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(3, 1fr);
+      width: 100%;
+      height: auto;
+      gap: 100px;
+
+      & > div {
+        figure {
+          figcaption {
+            .popup {
+              z-index: 9999;
+              height: 80px;
+            }
+          }
+        }
+      }
+
+      .first-row {
+        grid-row: 1;
+        grid-column: 1;
+      }
+
+      .column1 {
+        grid-column: 1;
+      }
+
+      .column2 {
+        grid-row: 3;
+        grid-column: 1;
+      }
+    }
+  }
+}
+
+#contact {
+  @include respond-to(mobile) {
+    padding: 1rem;
+    padding-bottom: 20vh;
+    display: flex;
+    place-items: unset;
+
+    .container {
+      width: 100%;
+
+      #form {
+        width: 100%;
+
+        textarea {
+          width: 100%;
+          max-width: 100%;
+          min-width: 100%;
+        }
+      }
+    }
+  }
+}
+
+#footer {
+  @include respond-to(mobile) {
+    .footer-header {
+      flex-direction: column;
+      align-items: start;
+      gap: 2rem;
+    }
+  }
+}
+
 // sass --watch scss/global.scss css/global.css

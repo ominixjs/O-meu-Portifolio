@@ -556,4 +556,140 @@ button {
   font-size: 12px;
 }
 
+@media (max-width: 1000px) {
+  .navbar > div .nav-links {
+    display: none;
+  }
+}
+
+@media (max-width: 1000px) {
+  #home {
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    height: auto;
+    padding: 10vh 1rem;
+  }
+  #home::after {
+    display: none;
+  }
+  #home > div {
+    width: 100%;
+  }
+  #home .introduction {
+    padding-bottom: 0;
+  }
+  #home .introduction .mini-title {
+    max-width: 100%;
+    font-size: 20px;
+  }
+  #home .introduction h2 {
+    font-size: 64px;
+  }
+  #home .introduction .prg {
+    max-width: 100%;
+  }
+  #home img {
+    display: none;
+  }
+}
+
+@media (max-width: 1000px) {
+  #skills .container {
+    width: 100%;
+    height: auto;
+    flex-wrap: wrap;
+    padding: 20vh 1rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  #about {
+    flex-direction: column;
+    padding: 0;
+    height: auto;
+  }
+  #about > img {
+    width: 300px;
+    height: 430px;
+  }
+  #about .about-me {
+    padding-inline: 1rem;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+  #about .about-me .mini-blocks-flex {
+    width: 100%;
+  }
+  #about .about-me .mini-blocks-flex div {
+    width: 33.3333333333%;
+  }
+}
+
+@media (max-width: 1000px) {
+  #projects {
+    height: auto;
+    width: auto;
+    padding: 20vh 1rem;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+  }
+  #projects .introduction {
+    height: auto;
+    width: auto;
+  }
+  #projects .grid-projects {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    width: 100%;
+    height: auto;
+    gap: 100px;
+  }
+  #projects .grid-projects > div figure figcaption .popup {
+    z-index: 9999;
+    height: 80px;
+  }
+  #projects .grid-projects .first-row {
+    grid-row: 1;
+    grid-column: 1;
+  }
+  #projects .grid-projects .column1 {
+    grid-column: 1;
+  }
+  #projects .grid-projects .column2 {
+    grid-row: 3;
+    grid-column: 1;
+  }
+}
+
+@media (max-width: 1000px) {
+  #contact {
+    padding: 1rem;
+    padding-bottom: 20vh;
+    display: flex;
+    place-items: unset;
+  }
+  #contact .container {
+    width: 100%;
+  }
+  #contact .container #form {
+    width: 100%;
+  }
+  #contact .container #form textarea {
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+  }
+}
+
+@media (max-width: 1000px) {
+  #footer .footer-header {
+    flex-direction: column;
+    align-items: start;
+    gap: 2rem;
+  }
+}
+
 /*# sourceMappingURL=global.css.map */
