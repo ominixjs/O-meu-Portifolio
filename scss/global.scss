@@ -10,6 +10,7 @@
 $breakpoints: (
   mobile: 1000px,
   desktop: 1024px,
+  monitor: 1920px,
 );
 
 @mixin respond-to($device) {
@@ -47,7 +48,7 @@ $breakpoints: (
     flex-direction: column;
     align-items: center;
     justify-content: start;
-    height: auto;
+    height: calc(100vh - 73px);
     padding: 10vh 1rem;
 
     &::after {
@@ -181,10 +182,20 @@ $breakpoints: (
       #form {
         width: 100%;
 
+        input,
+        textarea {
+          padding: 9px 18px;
+          font-size: 18px;
+          border-width: 2px;
+        }
+
         textarea {
           width: 100%;
           max-width: 100%;
           min-width: 100%;
+          height: 200px;
+          max-height: 300px;
+          min-height: 200px;
         }
       }
     }

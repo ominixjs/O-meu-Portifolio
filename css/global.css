@@ -581,7 +581,7 @@ button {
     flex-direction: column;
     align-items: center;
     justify-content: start;
-    height: auto;
+    height: calc(100vh - 73px);
     padding: 10vh 1rem;
   }
   #home::after {
@@ -691,10 +691,19 @@ button {
   #contact .container #form {
     width: 100%;
   }
+  #contact .container #form input,
+  #contact .container #form textarea {
+    padding: 9px 18px;
+    font-size: 18px;
+    border-width: 2px;
+  }
   #contact .container #form textarea {
     width: 100%;
     max-width: 100%;
     min-width: 100%;
+    height: 200px;
+    max-height: 300px;
+    min-height: 200px;
   }
 }
 
