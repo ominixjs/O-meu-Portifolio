@@ -86,3 +86,12 @@ button {
   filter: invert(74%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(92%)
     contrast(85%);
 }
+
+.mini-title {
+  max-width: 50%;
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: colors.$c-primary;
+}

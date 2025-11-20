@@ -26,7 +26,20 @@
       }
     }
   }
+
+  .navbar-buttons {
+    gap: 2rem;
+
+    button {
+      display: none;
+      img {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
 }
+
 #home {
   display: flex;
   justify-content: space-between;
@@ -62,15 +75,6 @@
     gap: 1rem 0;
     padding-bottom: 150px;
 
-    .mini-title {
-      max-width: 50%;
-      font-size: 22px;
-      font-weight: 500;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
-      color: colors.$c-primary;
-    }
-
     h2 {
       font-size: 80px;
       line-height: 1;
@@ -97,8 +101,8 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 40px;
-        height: 40px;
+        width: 50px;
+        height: 50px;
         border-radius: 50%;
         border: 1px solid colors.$c-border;
 
@@ -110,8 +114,8 @@
         }
 
         img {
-          width: 20px;
-          height: 20px;
+          width: 25px;
+          height: 25px;
           display: flex;
         }
       }
@@ -128,7 +132,10 @@
 
 #skills {
   display: flex;
-  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+
   .container {
     width: auto;
     height: 250px;
@@ -365,12 +372,12 @@
             display: inherit;
             flex-direction: column;
             align-items: end;
-            gap: 0.5rem;
+            gap: 14px;
 
             .material-list {
               display: inherit;
               flex-wrap: nowrap;
-              gap: 0.5rem;
+              gap: 14px;
 
               img {
                 width: 15px;

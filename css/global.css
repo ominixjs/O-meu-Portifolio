@@ -81,6 +81,15 @@ button {
   filter: invert(74%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(92%) contrast(85%);
 }
 
+.mini-title {
+  max-width: 50%;
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #f7df1e;
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -103,6 +112,16 @@ button {
 }
 .navbar > div .nav-links li a:hover {
   color: #ffffff;
+}
+.navbar .navbar-buttons {
+  gap: 2rem;
+}
+.navbar .navbar-buttons button {
+  display: none;
+}
+.navbar .navbar-buttons button img {
+  width: 40px;
+  height: 40px;
 }
 
 #home {
@@ -138,14 +157,6 @@ button {
   gap: 1rem 0;
   padding-bottom: 150px;
 }
-#home .introduction .mini-title {
-  max-width: 50%;
-  font-size: 22px;
-  font-weight: 500;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  color: #f7df1e;
-}
 #home .introduction h2 {
   font-size: 80px;
   line-height: 1;
@@ -168,8 +179,8 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   border: 1px solid #292929;
   transition: transform 400ms ease;
@@ -178,8 +189,8 @@ button {
   transform: scale(1.06);
 }
 #home .introduction .btn-flex a img {
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
   display: flex;
 }
 #home > img {
@@ -191,7 +202,9 @@ button {
 
 #skills {
   display: flex;
-  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
 }
 #skills .container {
   width: auto;
@@ -393,12 +406,12 @@ button {
   display: inherit;
   flex-direction: column;
   align-items: end;
-  gap: 0.5rem;
+  gap: 14px;
 }
 #projects .grid-projects > div figure figcaption .details-skills .material-list {
   display: inherit;
   flex-wrap: nowrap;
-  gap: 0.5rem;
+  gap: 14px;
 }
 #projects .grid-projects > div figure figcaption .details-skills .material-list img {
   width: 15px;
@@ -580,6 +593,9 @@ button {
   .navbar > div .nav-links {
     display: none;
   }
+  .navbar .navbar-buttons button {
+    display: flex;
+  }
 }
 
 @media (max-width: 1000px) {
@@ -609,17 +625,24 @@ button {
   #home .introduction .prg {
     max-width: 100%;
   }
+  #home .introduction .btn-flex {
+    margin-top: 2rem;
+  }
   #home img {
     display: none;
   }
 }
 
+#skills .mini-title {
+  margin-top: 20vh;
+}
 @media (max-width: 1000px) {
   #skills .container {
     width: 100%;
     height: auto;
     flex-wrap: wrap;
-    padding: 20vh 1rem;
+    padding: 2rem 1rem;
+    margin-bottom: 20vh;
   }
 }
 
@@ -667,9 +690,48 @@ button {
     height: auto;
     gap: 100px;
   }
+  #projects .grid-projects > div figure {
+    padding: 1rem;
+    flex-direction: column;
+  }
+  #projects .grid-projects > div figure > img {
+    width: 100%;
+    height: 200px;
+    object-fit: fill;
+  }
+  #projects .grid-projects > div figure figcaption {
+    position: relative;
+    opacity: 1;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    background-color: none;
+    border-radius: 0;
+    background-image: none;
+    padding-inline: 0;
+  }
+  #projects .grid-projects > div figure figcaption > div {
+    max-width: 100%;
+  }
+  #projects .grid-projects > div figure figcaption p {
+    font-size: 14px;
+  }
+  #projects .grid-projects > div figure figcaption .details-skills {
+    margin-top: 2rem;
+    align-items: start;
+  }
+  #projects .grid-projects > div figure figcaption .btn-hide-mobile {
+    display: none;
+  }
   #projects .grid-projects > div figure figcaption .popup {
-    z-index: 9999;
-    height: 80px;
+    opacity: 1;
+    display: flex;
+    position: static;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    font-size: 14px;
+    border-radius: 0;
   }
   #projects .grid-projects .first-row {
     grid-row: 1;
@@ -710,6 +772,20 @@ button {
     height: 200px;
     max-height: 300px;
     min-height: 200px;
+  }
+  #contact .container .list-contact {
+    margin-top: 1rem;
+  }
+  #contact .container .list-contact .half-contact {
+    margin-top: 1rem;
+  }
+  #contact .container .list-contact .half-contact li a {
+    width: 50px;
+    height: 50px;
+  }
+  #contact .container .list-contact .half-contact li a img {
+    width: 25px;
+    height: 25px;
   }
 }
 

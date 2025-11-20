@@ -22,14 +22,22 @@
           </ul>
         </div>
 
-        <a href="#" class="btn sm">Fale comigo</a>
+        <div class="navbar-buttons">
+          <a href="#" class="btn sm">Fale comigo</a>
+          <button type="button" class="button-menu svgimage" id="btn_menu">
+            <img
+              src="assets/img/menu-hamburguer.svg"
+              alt="icone do botão do menu menu"
+            />
+          </button>
+        </div>
       </nav>
     </header>
 
     <!-- Homepage -->
     <section id="home">
       <div class="introduction">
-        <p class="mini-title">Olá, meu nome é</p>
+        <p class="mini-title">Olá, eu me chamo</p>
         <h2>Carlos Alexandre</h2>
         <p class="mini-title">E sou Desenvolvedor Web</p>
         <p class="prg">
@@ -63,6 +71,7 @@
 
     <!-- skills scrolling -->
     <section id="skills">
+      <p class="mini-title">Habilidades</p>
       <div class="container">
         <div>
           <img
@@ -142,12 +151,12 @@
             <p>Experiência</p>
           </div>
           <div>
-            <h4>2+</h4>
-            <p>Experiência</p>
+            <h4>10+</h4>
+            <p>Projetos</p>
           </div>
           <div>
-            <h4>2+</h4>
-            <p>Experiência</p>
+            <h4>3+</h4>
+            <p>Linguagens</p>
           </div>
         </div>
 
@@ -212,7 +221,7 @@
             <figcaption>
               <div>
                 <h4>Projeto 2</h4>
-                <button type="button" class="btn-popup">Descrição</button>
+                <button type="button" class="btn-hide-mobile">Descrição</button>
                 <div class="popup">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Quasi, id voluptas sequi adipisci eos laboriosam voluptatibus
@@ -250,7 +259,7 @@
             <figcaption>
               <div>
                 <h4>Projeto 2</h4>
-                <button type="button" class="btn-popup">Descrição</button>
+                <button type="button" class="btn-hide-mobile">Descrição</button>
                 <div class="popup">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Quasi, id voluptas sequi adipisci eos laboriosam voluptatibus
@@ -366,7 +375,8 @@
 
         <button type="button" class="btn">
           <img
-            src="assets/img/seta-para-a-direita.svg"
+            src="assets/img/seta-para-cima.svg"
+            onclick="window.scrollTo(0, 0)"
             alt="icone de rede social"
           />
         </button>

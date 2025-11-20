@@ -46,6 +46,12 @@ body {
         display: none;
       }
     }
+
+    .navbar-buttons {
+      button {
+        display: flex;
+      }
+    }
   }
 }
 
@@ -80,6 +86,10 @@ body {
       .prg {
         max-width: 100%;
       }
+
+      .btn-flex {
+        margin-top: 2rem;
+      }
     }
 
     img {
@@ -89,12 +99,17 @@ body {
 }
 
 #skills {
+  .mini-title {
+    margin-top: 20vh;
+  }
+
   @include respond-to(mobile) {
     .container {
       width: 100%;
       height: auto;
       flex-wrap: wrap;
-      padding: 20vh 1rem;
+      padding: 2rem 1rem;
+      margin-bottom: 20vh;
     }
   }
 }
@@ -149,10 +164,52 @@ body {
 
       & > div {
         figure {
+          padding: 1rem;
+          flex-direction: column;
+
+          & > img {
+            width: 100%;
+            height: 200px;
+            object-fit: fill;
+          }
+
           figcaption {
+            position: relative;
+            opacity: 1;
+            flex-direction: column;
+            justify-content: start;
+            align-items: start;
+            background-color: none;
+            border-radius: 0;
+            background-image: none;
+            padding-inline: 0;
+
+            & > div {
+              max-width: 100%;
+            }
+
+            p {
+              font-size: 14px;
+            }
+
+            .details-skills {
+              margin-top: 2rem;
+              align-items: start;
+            }
+
+            .btn-hide-mobile {
+              display: none;
+            }
+
             .popup {
-              z-index: 9999;
-              height: 80px;
+              opacity: 1;
+              display: flex;
+              position: static;
+              margin: 0;
+              padding: 0;
+              background-color: transparent;
+              font-size: 14px;
+              border-radius: 0;
             }
           }
         }
@@ -202,6 +259,24 @@ body {
           height: 200px;
           max-height: 300px;
           min-height: 200px;
+        }
+      }
+
+      .list-contact {
+        margin-top: 1rem;
+
+        .half-contact {
+          margin-top: 1rem;
+
+          li a {
+            width: 50px;
+            height: 50px;
+
+            img {
+              width: 25px;
+              height: 25px;
+            }
+          }
         }
       }
     }
