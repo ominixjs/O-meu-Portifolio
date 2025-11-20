@@ -116,12 +116,65 @@ button {
 .navbar .navbar-buttons {
   gap: 2rem;
 }
-.navbar .navbar-buttons button {
+.navbar .navbar-buttons #btn_menu {
   display: none;
 }
-.navbar .navbar-buttons button img {
+.navbar .navbar-buttons #btn_menu img {
   width: 40px;
   height: 40px;
+}
+
+#menu_bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  background-color: rgba(31, 31, 31, 0.5);
+  overflow: hidden;
+  display: none;
+}
+#menu_bg:target {
+  display: block;
+}
+#menu_bg:target #menu {
+  width: 300px;
+}
+#menu_bg #menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 9999;
+  width: 0;
+  height: 100%;
+  background-color: #1f1f1f;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+#menu_bg #menu .btn-close {
+  display: flex;
+  margin: 2rem;
+}
+#menu_bg #menu .btn-close img {
+  width: 30px;
+  height: 30px;
+}
+#menu_bg #menu .menu-nav-links {
+  width: 100%;
+}
+#menu_bg #menu .menu-nav-links li {
+  padding: 9px 18px;
+}
+#menu_bg #menu .menu-nav-links li a {
+  color: #bfbfbf;
+  font-size: 18px;
+  font-weight: 400;
+}
+#menu_bg #menu .menu-nav-links li a:hover {
+  color: #ffffff;
 }
 
 #home {
@@ -593,7 +646,7 @@ button {
   .navbar > div .nav-links {
     display: none;
   }
-  .navbar .navbar-buttons button {
+  .navbar .navbar-buttons #btn_menu {
     display: flex;
   }
 }

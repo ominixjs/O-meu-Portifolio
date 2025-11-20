@@ -30,11 +30,72 @@
   .navbar-buttons {
     gap: 2rem;
 
-    button {
+    #btn_menu {
       display: none;
       img {
         width: 40px;
         height: 40px;
+      }
+    }
+  }
+}
+
+#menu_bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  background-color: rgb(31, 31, 31, 0.5);
+  overflow: hidden;
+  display: none;
+
+  &:target {
+    display: block;
+
+    #menu {
+      width: 300px;
+    }
+  }
+
+  #menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 9999;
+    width: 0;
+    height: 100%;
+    background-color: #1f1f1f;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+
+    .btn-close {
+      display: flex;
+      margin: 2rem;
+      img {
+        width: 30px;
+        height: 30px;
+      }
+    }
+
+    .menu-nav-links {
+      width: 100%;
+
+      li {
+        padding: 9px 18px;
+
+        a {
+          color: colors.$c-prg-dark;
+          font-size: 18px;
+          font-weight: 400;
+
+          &:hover {
+            color: colors.$c-title-dark;
+          }
+        }
       }
     }
   }
